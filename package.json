@@ -22,5 +22,9 @@
   "devDependencies": {
     "eslint": "^5.14.1",
     "jest": "^24.1.0"
+  },
+  "dependencies": {
+    "request": "^2.88.0",
+    "request-promise-native": "^1.0.7"
   }
 }
