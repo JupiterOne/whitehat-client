@@ -1,0 +1,26 @@
+{
+  "name": "whitehat-client",
+  "description": "JavaScript Whitehat API client",
+  "version": "0.1.0",
+  "main": "src/WhitehatClient.js",
+  "scripts": {
+    "lint": "eslint src test",
+    "test": "yarn test:unit",
+    "test:unit": "jest src/",
+    "test:integration": "jest -i test/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lifeomic/whitehat-client.git"
+  },
+  "author": "LifeOmic Security <infosec@lifeomic.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lifeomic/whitehat-client/issues"
+  },
+  "homepage": "https://github.com/lifeomic/whitehat-client#readme",
+  "devDependencies": {
+    "eslint": "^5.14.1",
+    "jest": "^24.1.0"
+  }
+}
