@@ -3,9 +3,15 @@
   "description": "JavaScript Whitehat API client",
   "version": "0.1.0",
   "main": "src/WhitehatClient.js",
+  "files": [
+    "/src"
+  ],
+  "engines": {
+    "node": ">=8.10"
+  },
   "scripts": {
     "lint": "eslint src test",
-    "test": "yarn test:unit",
+    "test": "yarn lint && yarn test:unit",
     "test:unit": "jest src/",
     "test:integration": "jest -i test/"
   },
@@ -19,12 +25,17 @@
     "url": "https://github.com/lifeomic/whitehat-client/issues"
   },
   "homepage": "https://github.com/lifeomic/whitehat-client#readme",
-  "devDependencies": {
-    "eslint": "^5.14.1",
-    "jest": "^24.1.0"
-  },
   "dependencies": {
     "request": "^2.88.0",
     "request-promise-native": "^1.0.7"
+  },
+  "devDependencies": {
+    "eslint": "^5.14.1",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "jest": "^24.1.0"
   }
 }
