@@ -5,5 +5,5 @@ REST API client for Whitehat.
 ## Install
 
 ```bash
-yarn add @lifeomic/whitehat-client
+yarn add @jupiterone/whitehat-client
 ```

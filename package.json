@@ -1,6 +1,6 @@
 {
-  "name": "whitehat-client",
-  "description": "JavaScript Whitehat API client",
+  "name": "@jupiterone/whitehat-client",
+  "description": "Whitehat REST API client",
   "version": "0.1.0",
   "main": "src/WhitehatClient.js",
   "files": [
@@ -17,14 +17,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/lifeomic/whitehat-client.git"
+    "url": "https://github.com/JupiterOne/whitehat-client.git"
   },
-  "author": "LifeOmic Security <infosec@lifeomic.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/lifeomic/whitehat-client/issues"
+    "url": "https://github.com/JupiterOne/whitehat-client/issues"
   },
-  "homepage": "https://github.com/lifeomic/whitehat-client#readme",
+  "homepage": "https://github.com/JupiterOne/whitehat-client#readme",
   "dependencies": {
     "request": "^2.88.0",
     "request-promise-native": "^1.0.7"
