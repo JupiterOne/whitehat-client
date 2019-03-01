@@ -10,7 +10,7 @@
     "node": ">=8.10"
   },
   "scripts": {
-    "lint": "eslint src test",
+    "lint": "eslint src --fix",
     "test": "yarn lint && yarn test:unit",
     "test:unit": "jest src/",
     "test:integration": "jest -i test/"
