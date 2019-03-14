@@ -11,7 +11,10 @@ class WhitehatClient {
   }
 
   getUrl (options = {}) {
-    let url = this.whBaseUrl + this.urlPart(options.base || "application");
+    let url = this.whBaseUrl + (options.base !== null
+      ? this.urlPart(options.base || "application")
+      : "/"
+    );
 
     if (options.appId) { url += this.urlPart(options.appId); }
     if (options.additionalPathPart) { url += this.urlPart(options.additionalPathPart); }
@@ -66,6 +69,16 @@ class WhitehatClient {
     const options = this.requestOptions({
       uri: this.getUrl({
         queryParams: ["display_all=1"],
+      }),
+    });
+
+    return request(options);
+  }
+
+  async getResources () {
+    const options = this.requestOptions({
+      uri: this.getUrl({
+        base: null,
       }),
     });
 
