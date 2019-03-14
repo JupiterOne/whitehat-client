@@ -23,6 +23,35 @@ class WhitehatClient {
     return url;
   }
 
+  async getAll (options) {
+    let offset = 0;
+    if (options.pageInfo) {
+      const total = options.pageInfo.total;
+      const limit = options.pageInfo.limit;
+      const previousOffset = options.pageInfo.offset;
+
+      if (previousOffset + limit < total) {
+        offset = previousOffset + limit;
+      } else {
+        return options.collection;
+      }
+    }
+
+    const requestOptions = this.requestOptions({
+      uri: this.getUrl({
+        ...options.url,
+        queryParams: [`page:offset=${offset}`],
+      }),
+    });
+
+    const result = await request(requestOptions);
+
+    options.collection = (options.collection || []).concat(result.collection);
+    options.pageInfo = result.page;
+
+    return this.getAll(options);
+  }
+
   urlPart (part) {
     return "/" + part;
   }
@@ -41,6 +70,15 @@ class WhitehatClient {
     });
 
     return request(options);
+  }
+
+  async getVulnerabilities (appId) {
+    return this.getAll({
+      url: {
+        appId: appId,
+        additionalPathPart: "vuln",
+      },
+    });
   }
 
   async addExclusions (applications) {
