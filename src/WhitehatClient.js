@@ -72,7 +72,7 @@ class WhitehatClient {
       }),
     });
 
-    return request(options);
+    return (await request(options)).collection;
   }
 
   async getResources () {
