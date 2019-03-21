@@ -1,7 +1,7 @@
 {
   "name": "@jupiterone/whitehat-client",
   "description": "Whitehat REST API client",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "main": "src/WhitehatClient.js",
   "files": [
     "/src"
