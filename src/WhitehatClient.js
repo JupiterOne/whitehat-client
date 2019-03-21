@@ -40,10 +40,13 @@ class WhitehatClient {
       }
     }
 
+    let queryParams = options.url.queryParams || [];
+    queryParams.push(`page:offset=${offset}`);
+
     const requestOptions = this.requestOptions({
       uri: this.getUrl({
         ...options.url,
-        queryParams: [`page:offset=${offset}`],
+        queryParams
       }),
     });
 
@@ -85,13 +88,26 @@ class WhitehatClient {
     return request(options);
   }
 
-  async getVulnerabilities (appId) {
-    return this.getAll({
-      url: {
-        appId: appId,
+  async getVulnerabilities ({
+    appId,
+    queryParams,
+  } = {}) {
+    let url;
+
+    if (appId) {
+      url = {
         additionalPathPart: "vuln",
-      },
-    });
+        appId,
+        queryParams
+      };
+    } else {
+      url = {
+        base: "source_vuln",
+        queryParams
+      };
+    }
+
+    return this.getAll({ url });
   }
 
   async addExclusions (applications) {
