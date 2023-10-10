@@ -1,7 +1,12 @@
 {
   "name": "@jupiterone/whitehat-client",
-  "description": "Whitehat REST API client",
   "version": "0.3.0",
+  "description": "Whitehat REST API client",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com///oauth2"
+  },
+  "license": "MIT",
   "main": "src/WhitehatClient.js",
   "files": [
     "/src"
@@ -15,11 +20,6 @@
     "test:unit": "jest src/",
     "test:integration": "jest -i test/"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/JupiterOne/whitehat-client.git"
-  },
-  "license": "MIT",
   "bugs": {
     "url": "https://github.com/JupiterOne/whitehat-client/issues"
   },
