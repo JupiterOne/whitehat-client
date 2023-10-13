@@ -14,7 +14,7 @@ info:
   description: Whitehat REST API client
   x-cortex-git:
     github:
-      repository: //oauth2
+      repository: JupiterOne/whitehat-client
   x-cortex-owners:
     - type: group
       name: JupiterOne/sre
