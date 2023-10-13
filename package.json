@@ -1,5 +1,5 @@
 {
-  "name": "whitehat-client",
+  "name": "@jupiterone/whitehat-client",
   "version": "0.3.0",
   "description": "Whitehat REST API client",
   "repository": {
